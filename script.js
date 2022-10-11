@@ -51,13 +51,13 @@ let checkwinning=()=>{
             elmarray.forEach((elem)=>{
                 if(elem.innerHTML===""){
                     tempo=false;
-                    console.log("inside checkwinng else")
+                    
                     
                 }
             })
         }
     })
-    console.log(tempo)
+    
     if(tempo){
         array.forEach((arr)=>{
             if(elmarray[arr[0]].innerHTML===elmarray[arr[1]].innerHTML && elmarray[arr[1]].innerHTML===elmarray[arr[2]].innerHTML && elmarray[arr[0]].innerHTML===elmarray[arr[2]].innerHTML){
@@ -71,7 +71,7 @@ let checkwinning=()=>{
                 winner.innerText=`Winner is ${turn}`
                 gamecon.style.display="none"
                 win.style.display="block"
-                console.log("inside tempo if")
+                
                 document.getElementById("checked").style.display="block";
                 mean=false;
                         
@@ -80,7 +80,7 @@ let checkwinning=()=>{
                 gamecon.style.display="none"
                 document.getElementById("checked").style.display="none";
                 win.style.display="block"
-                console.log("inside tempo else")
+                
             }
         })
 
@@ -88,7 +88,7 @@ let checkwinning=()=>{
 }
 
 elemarray.forEach((box)=>{
-    // console.log(box)
+    
     box.addEventListener("click",()=>{
         if(box.innerHTML===""){
             box.innerHTML=turn
